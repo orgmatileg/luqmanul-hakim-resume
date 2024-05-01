@@ -1,0 +1,304 @@
+%-------------------------
+% Rover Resume Template
+% Link: https://github.com/subidit/rover-resume
+%------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{inter} % https://tug.org/FontCatalogue/
+\renewcommand*\familydefault{\sfdefault}
+
+\usepackage{geometry}
+\geometry{
+a4paper,
+top=1.8cm,
+bottom=1in,
+left=2.5cm,
+right=2.5cm
+}
+
+\setcounter{secnumdepth}{0} % remove section numbering
+\pdfgentounicode=1 % make ATS friendly
+
+% \usepackage[dvipsnames, svgnames, x11names]{xcolor} 
+\usepackage[dvipsnames]{xcolor} % xcolor.pdf Sec.4 Colors by Name
+\colorlet{icnclr}{gray}
+% \colorlet [⟨type⟩]{⟨name⟩}[⟨num model⟩]{⟨color ⟩}
+% \definecolor[⟨type⟩]{⟨name⟩}{⟨model-list⟩}{⟨spec-list⟩}
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    noitemsep,
+    left=0pt..1.5em
+}
+\setlist[description]{itemsep=0pt}
+\setlist[enumerate]{align=left}
+
+\usepackage{titlesec}
+% \titlespacing{command}{left spacing}{before spacing}{after spacing}[right]
+% \titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+% \titleformat{<command>}[<shape>]{<format>}{<label>}{<sec>}{<before-code>}[<after-code>]  
+\titleformat{\section}{\color{Sepia}\large\fontseries{black}\selectfont\uppercase}{}{}{\ruleafter}[\global\RemVStrue]
+\titleformat{\subsection}{\large\fontseries{semibold}\selectfont}{}{}{\rvs}
+\titleformat{\subsubsection}{\large\fontseries{medium}\selectfont}{}{}{}
+
+\usepackage{xhfill} 
+\newcommand\ruleafter[1]{#1~\xrfill[.5ex]{1pt}[gray]} % add rule after title in .5 x-height 
+
+\newif\ifRemVS % remove vspace between \section & \subsection
+\newcommand{\rvs}{
+    \ifRemVS
+        \vspace{-1.5ex}
+    \fi
+    \global\RemVSfalse
+}
+
+
+\usepackage{fontawesome5}
+
+\usepackage[bookmarks=false]{hyperref} % [imp!]
+\hypersetup{ % https://en.wikibooks.org/wiki/LaTeX/Hyperlinks
+    colorlinks=true,
+    urlcolor=Sepia,
+    pdftitle={Luqmanul Hakim - Resume},
+}
+
+\usepackage[page]{totalcount}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}	
+\fancyhf{}							
+\cfoot{\color{darkgray} Luqmanul Hakim Resume -- Page \thepage{} of \totalpages}
+
+
+\begin{document}
+
+%== HEADER ==%
+\begin{center}
+    {\fontsize{36}{36}\selectfont \interheavy Luqmanul Hakim} \\ \bigskip
+    {\color{gray}\fontsize{13}{13}\selectfont Software Engineer with DevOps Mindset with 6+ year experiences} \\ \bigskip
+    {\color{icnclr}\faEnvelope[regular]} \href{mailto:luqmanulhacim@outlook.com}{luqmanulhacim@outlook.com} $|$
+    {\color{icnclr}\faIcon{mobile-alt}} \href{tel:+6287788531313}{+62 877 8853 1313}
+    \\ {\color{icnclr}\faLinkedinIn} \href{https://www.linkedin.com/in/luqmanulhakim5}{linkedin.com/in/luqmanulhakim5}
+\end{center}
+
+\section{Professional Summary}
+ {Engineering manager and software engineer with demonstrated experience in developing software with
+  values across different industries, starting from SMEs, startups, until unicorn companies. With my unique
+  style of leadership, devops, and product mindset, I am able to build and empower several tech teams in
+  various companies while being passionate about business strategy and driving innovation through
+  technology, even though I only have a high school diploma degree.}
+%===============
+
+
+\section{Experience}
+%===================
+\subsection{Mejadokter - Health Tech}
+\subsubsection{CTO \& Founder | Jan 2020 - Now \hfill Bali, Remote}
+\begin{itemize}
+    \item Tech Stack: Node.js, Express.js, Go, MongoDB, Redis, React
+    \item I lead Mejadokter's goals to transform health-care operations by digitizing medical data and clinical management systems. Leading the technology strategy and development, I am committed to producing solid digital solutions that improve operational efficiency and client satisfaction.
+    \item Key achievements include:
+          \begin{itemize}
+              \item Developed and deployed a powerful data migration tool to help health facilities seamlessly convert from several clinic management programs to Mejadokter. This solution has drastically decreased onboarding times and increased data accuracy for new clients.
+              \item Led a dynamic team in the development and deployment of Mejadokter's primary products, which drove the company and enabled hundreds of clinics to improve service delivery and patient management.
+              \item  Developed and implemented a strategic technology roadmap that includes major integrations such as Integrasi SatuSehat, Integrasi BPJS Antrian Online (aplikasi JKN), Integrasi BPJS Pcare, and a CRM system for patient management in clinics.
+          \end{itemize}
+\end{itemize}
+
+\subsection{Gokomodo - Agricultural Supply Chain}
+\subsubsection{Engineering Manager | Sep 2022 - February 2024 \hfill Jakarta, Hybrid}
+\begin{itemize}
+    \item Tech Stack: Go, Docker, PostgreSQL, Redis, React, React Native, AWS, GCP
+    \item Oversee a diverse team of over 20 members across multiple software engineering functions including Back-End, Front-End Web, Front-End Mobile, QA Manual, QA Automation, and DevOps. I have successfully maintained nearly zero major incidents annually through effective management and team leadership.
+    \item DevOps:
+          \begin{itemize}
+              \item Implemented cost-saving measures for cloud and infrastructure expenses, ensuring effective resource utilization.
+              \item Developed self-service tools for app deployment, configuration management, and service restarts, reducing dependencies on the DevOps team and empowering developers.
+          \end{itemize}
+    \item Quality Assurance:
+          \begin{itemize}
+              \item Standardized QA processes, including test cases, bug reports, and test plans under my leadership.
+              \item Advanced the implementation of automation testing across teams, setting up essential tools and fostering collaboration between manual and automation teams.
+          \end{itemize}
+    \item Back-End Development:
+          \begin{itemize}
+              \item Established project templates based on clean architecture to enhance unit testing and maintainability.
+              \item Conducted thorough reviews of database designs and critical feature implementations to ensure robustness and performance.
+          \end{itemize}
+    \item People and Team Management:
+          \begin{itemize}
+              \item Streamlined the interview and testing processes for new software engineers to match team and business needs.
+              \item Engaged in regular one-on-one meetings to ensure alignment and foster open communication.
+              \item Led performance reviews and conflict resolution to maintain a conducive and safe work environment.
+              \item Initiated regular sharing sessions and team activities to boost knowledge exchange and mental health.
+          \end{itemize}
+    \item Planning and Implementation:
+          \begin{itemize}
+              \item Standardized task breakdown from user stories and enforced the effective use of Jira for project management.
+              \item Championed Sprint Planning and Sprint Grooming sessions to optimize team workflows and deliverables.
+          \end{itemize}
+\end{itemize}
+
+\subsection{Chatat - PoS, Accounting, Web Builder}
+\subsubsection{CTO | Mar 2022 - Sep 2022\hfill Jakarta, Remote}
+\begin{itemize}
+    \item Tech Stack: Go, Docker, PostgreSQL, Redis, React, React Native, AWS.
+    \item Responsible for outlining the company's technological vision and implementing technology efficiency strategies on Chatat's daily operations.
+    \item Lead the team to build and roadmap profitable products to power up Chatat’s business.
+    \item Conduct root-cause analysis to identify pain points in each department.
+    \item Manage the technology organization by overseeing the technology talent strategy, which includes
+          product, design, and technology teams.
+\end{itemize}
+\subsubsection{Head Of Engineering | Jul 2021 - Mar 2022 \hfill Jakarta, Remote}
+\begin{itemize}
+    \item Tech Stack: Go, Docker, PostgreSQL, Redis, React, React Native, AWS.
+    \item Leading and overseeing the engineering department of Chatat; from hiring and training new team
+          members to managing tech projects.
+    \item Managing engineering projects from start to finish by developing any SOP related to the company's
+          continuous improvement goals.
+    \item Empowering the tech team at Chatat by implementing monthly one-on-one reviews, sharing
+          sessions, and designing training specifications.
+    \item Developing and implementing the scrum methodology.
+    \item Design strategies for future development projects based on the Chatat’s overall objectives and
+          resources.
+\end{itemize}
+\subsubsection{Lead Backend Engineer | May 2021 - Jul 2021 \hfill Jakarta, Remote}
+\begin{itemize}
+    \item Tech Stack: Go, Docker, PostgreSQL, Redis, React, React Native, AWS.
+    \item In charge of all backend project improvements, such as build automation for BitBucket Pipeline
+          deployment, build documentation for easy onboarding to the backend codebase, and building the service
+          for easy configuration by DevOps.
+\end{itemize}
+
+\subsection{AVANA - Social Commerce \& Web Builder}
+\subsubsection{DevOps Engineer | Jul 2021 - Nov 2021 \hfill Malaysia, Remote}
+\begin{itemize}
+    \item Tech Stack: AWS, Docker, MySQL, PHP, Laravel, Symphony, React, Serverless
+    \item At AVANA, I spearheaded the successful migration of our legacy service deployment from EC2 to Fargate, significantly enhancing our system's capacity to handle an increase from 283 requests per second (RPS) to over 13,000 RPS, crucial during flash sales events, all achieved with zero downtime.
+    \item My responsibilities included analyzing the existing technology to develop a comprehensive improvement plan for our engineering teams.
+    \item I established key milestones and streamlined processes to enhance collaboration across departments, ensuring efficient project progression.
+    \item Additionally, I supported engineers in various departments by assisting in the creation and demonstration of practical solutions, fostering a collaborative environment and enhancing team capabilities in deploying scalable, robust solutions.
+\end{itemize}
+
+\subsection{Grab}
+\subsubsection{SWE, Backend (Merchant Experience) | Apr 2020 - Jul 2021 \hfill Jakarta, Remote}
+\begin{itemize}
+    \item Tech Stack: Go, Docker, MySQL, Kafka, Redis, Aerospike, Jenkins, Kubernetes
+    \item Participate in the development of merchant.grab.com from the ground up through the completion.
+    \item Development of backend API endpoints using Go, MySQL, Aerospike, and Kafka.
+    \item Connect Kafka data sources to Grab API.
+    \item Creating engineering documentation such as engineering specifications and tutorials to assist
+          engineers in joining my team.
+    \item Developing docker-compose for the frontend team to facilitate project management.
+\end{itemize}
+\subsubsection{SWE, Backend (GrabKios) | Aug 2019 - Apr 2020 \hfill Jakarta, Hybrid}
+\begin{itemize}
+    \item Tech Stack: Go, Docker, MySQL, Kafka, Redis, Aerospike, Jenkins, Kubernetes
+    \item Design and implement using cutting edge Go language and constantly improve the availability,
+          scalability, latency, and efficiency of the platform.
+    \item Collaborate with product analysts, managers and data science teams to define and prototype and
+          build complex product features on our platform.
+    \item Manage uptime and availability of components/services to our internal users by implementing High
+          Availability tools and best practices.
+    \item Participate in code and design reviews to maintain our high development standards.
+    \item Engage in service capacity and demand planning, software performance analysis, costing, tuning
+          and optimization.
+\end{itemize}
+
+\subsection{Nusatek.id - IT Consultant \& Software House}
+\subsubsection{Lead Backend Engineer | Feb 2019 - Aug 2019 \hfill Jakarta, On-site}
+\begin{itemize}
+    \item Tech Stack: Node.js, Express.js, Go, React, Docker, MongoDB, MySQL.
+    \item Work as a front-end engineer on the development team to create a management dashboard for ManyOption (moaja.id). This is written in React.
+    \item Work as a backend engineer on the development team to create an API for importing apartment rooms via CSV. This is written in express.js \& MongoDB (Node.js).
+\end{itemize}
+\subsubsection{Software Engineer | Sep 2018 - Feb 2019 \hfill Jakarta, On-site}
+\begin{itemize}
+    \item Tech Stack: Node.js, Express.js, React, MongoDB
+    \item Work as a front-end engineer on the development team to create a management dashboard for ManyOption (moaja.id). This is written in React.
+    \item Work as a backend engineer on the development team to create an API for importing apartment rooms via CSV. This is written in express.js \& MongoDB (Node.js).
+\end{itemize}
+
+\subsection{Volantech.io - IT Consultant and Software House}
+\subsubsection{SWE, Junior Backend | Sep 2018 - Feb 2019 \hfill Jakarta, Freelance}
+\begin{itemize}
+    \item Tech Stack: Node.js, MongoDB, Meteor.js, Angular.js, Angular 5
+    \item During the Asian Para Games 2018, I was involved in the development of web applications and REST APIs as both a backend and frontend engineer. Utilizing NodeJS frameworks, Meteor.js for the backend and Angular for the frontend, I contributed to creating interactive, responsive web applications that supported the event's operations and user engagement.
+    \item My role encompassed the full stack of development tasks—from designing and implementing APIs to developing and refining the frontend interface, ensuring seamless integration and optimal performance across platforms.
+\end{itemize}
+
+\subsection{Hyperpedia.id - PC Gaming Consultant and Store}
+\subsubsection{Full-Stack Engineer | Mar 2018 - Sep 2018 \hfill Jakarta, Freelance}
+\begin{itemize}
+    \item Tech Stack: PHP, Custom WordPress Pluggin, Custom WordPress Themes, CSS.
+    \item I specialize in creating custom plugins and pages tailored to customer needs, enabling users to assemble computers through a dynamic and intuitive form interface. Utilizing my expertise in PHP, CSS, and JavaScript, I design and implement these custom solutions to enhance user experience and functionality.
+    \item My work involves writing clean, maintainable code that not only meets specific client requirements but also ensures a seamless and responsive user interaction.
+\end{itemize}
+
+% \subsection{Organization \hfill City, State}
+% \subsubsection{Position Title \hfill Month Year - Month Year}
+% \begin{itemize}
+%     \item XYZ method - Accomplished [X] as measured by [Y], by doing [Z].
+%     \item CAR method - Context, Action, Result. STAR method - Situation, Task, Action, Result.
+%     \item Begin each line with an action verb and include details that will help the reader understand your accomplishments, skills, knowledge, abilities, or achievements.
+%     \item Quantify where possible.
+% \end{itemize}
+
+\section{Skills}
+%===============
+\begin{description}
+    \item[Technical] Go, Node.js, Docker, Docker Compose, PostgreSQL, MongoDB
+    \item[Language] Bahasa Indonesia, English
+        % \item[Laboratory] List scientific / research lab techniques or tools [If Applicable]
+    \item[Interests] Software Engineering, Brazilian Jiu-Jitsu, GYM
+\end{description}
+
+% \section{Projects}
+% %=================
+% % \subsection{Project Name {\normalfont $|$ \href{http://github.com}{\textit{GitHub Link}}} \hfill 2022}
+% \subsection{Siswamedia  \hfill 2022}
+% \begin{itemize}
+%     \item Tech Stack: Go, Flutter, MySQL, React
+%     \item Implemented ABC feature
+%     \item Optimised XYZ by 50\%
+% \end{itemize}
+
+\section{Certification \& Awards}
+%===============================
+\begin{enumerate}[itemsep=0pt]
+    \item [2021] [Alibaba Cloud] 6th Generation Elastic Compute Service Technical Essentials
+    \item [2021] [Alibaba Cloud] Relational Database Service Technical Operations
+    \item [2021] [Alibaba Cloud] Cloud Computing Using OSS to Publish a Static Website
+    \item [2021] [Alibaba Cloud] Using ECS to Construct a Dynamic Website
+    \item [2020] [AWS] Advance Architecting on AWS
+    \item [2020] [AWS] AWS Cloud Practitioner
+    \item [2019] [Coursera] GCP Platform Fundamentals: Core Infrastructure by Google Cloud
+    \item [2019] [Hacktiv8] Scalable Web Services with Golang Class
+\end{enumerate}
+
+\section{Education}
+%==============
+\vspace{0.5\baselineskip}
+
+\subsection{Asia Cyber University $|$ {\normalfont\textit{Bachelor of Accounting}} \hfill 2024 - On Going}
+% \begin{itemize}
+%     \item Cumulative GPA: 3.98
+%     \item Related Coursework: Intro to Programming with Python, Database Administration
+%     \item Rover Resume Award
+% \end{itemize}
+
+% \subsection{Graduation College \hfill City, State}
+% \subsubsection{Degree Name (B.S.) \hfill Year}
+% \begin{itemize}
+%     \item GPA: 3.4 (Mention if good)
+%     \item Related Coursework (list of relavent classes to the job)
+%     \item Dean's Award (list any awards or a
+%           +ivements)
+% \end{itemize}
+\vspace{0.5\baselineskip}
+
+\end{document}
